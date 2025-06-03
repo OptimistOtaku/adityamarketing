@@ -17,10 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gradient-to-b from-sky-50 from-0% via-slate-300 via-50% to-cyan-300 to-100%`}>
         <AuthProvider>
           <Navigation />
-          <main className="min-h-screen pt-20">
+          <main className="relative min-h-screen">
             {children}
           </main>
           <Footer />
