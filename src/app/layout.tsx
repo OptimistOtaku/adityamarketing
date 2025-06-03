@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import defaultMetadata from "./metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Aditya Marketing - Your Trusted Financial Partner",
-  description: "Aditya Marketing facilitates and finances all kinds of loans – personal loans, business loans, home loans, education loans, and more.",
-};
+export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
   children,
@@ -18,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="min-h-screen bg-white">
+        <Navigation />
+        <main className="min-h-screen pt-20">
           {children}
         </main>
         <Footer />
